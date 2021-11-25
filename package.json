@@ -1,0 +1,36 @@
+{
+  "name": "testtags",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --record --key 66bc29c6-f08b-40ad-bbef-77c051ee1958",
+    "cy:smoke": "cypress-tags run -e TAGS=\"@smokeTest\"",
+    "cy:sanity": "cypress-tags run -e TAGS=\"@sanityTest\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pcongote/testTags.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pcongote/testTags/issues"
+  },
+  "homepage": "https://github.com/Pcongote/testTags#readme",
+  "dependencies": {
+    "cypress": "^9.1.0",
+    "cypress-tags": "^0.3.0",
+    "har-validator": "^5.1.5"
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/integration/steps"
+  }
+}
